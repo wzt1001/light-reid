@@ -10,8 +10,8 @@ lightreid:
   light_search: False
 
 data:
-  sources: ['dukemtmcreid']
-  targets: ['market1501', 'dukemtmcreid']
+  sources: ['originalimages']
+  targets: ['originalimages']
   img_size: [224, 224] # height, width
   transforms_train: ['randomflip', 'padcrop', 'rea']
   transforms_test: []

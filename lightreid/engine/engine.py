@@ -10,7 +10,6 @@ import time
 
 import torch
 import torch.nn as nn
-# import apex
 
 from prettytable import PrettyTable
 

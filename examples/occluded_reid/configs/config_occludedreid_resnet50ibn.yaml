@@ -10,8 +10,8 @@ lightreid:
   light_search: False
 
 data:
-  sources: ['market1501']
-  targets: ['occludedreid', 'partialreid', 'partialilids']
+  sources: ['originalimages']
+  targets: ['originalimages']
   img_size: [256, 128] # height, width
   transforms_train: ['halfcrop', 'randomflip', 'padcrop', 'rea', 'colorjitor']
   transforms_test: []

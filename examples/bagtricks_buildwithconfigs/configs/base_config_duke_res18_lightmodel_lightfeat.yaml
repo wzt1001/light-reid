@@ -11,8 +11,8 @@ lightreid:
   teacher_path: './results/duke/resnet50/final_model.pth.tar'
 
 data:
-  sources: ['dukemtmcreid']
-  targets: ['market1501', 'dukemtmcreid']
+  sources: ['originalimages']
+  targets: ['originalimages']
   img_size: [256, 128] # height, width
   transforms_train: ['randomflip', 'padcrop', 'rea']
   transforms_test: []
