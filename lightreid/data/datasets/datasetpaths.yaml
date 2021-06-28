@@ -3,7 +3,7 @@
 
 root_path: 'C:\Users\User\Desktop\Magistrale\CV\database\Nostro'
 
-market1501:
+originalimages:
   path: 'C:\Users\User\Desktop\Magistrale\CV\database\Nostro'
   folder: 'originalimages_reID'
   download: True # if dataset not in path, automatically download and extract
