@@ -3,11 +3,11 @@
 @contact:   guan.wang0706@gmail.com
 """
 
-import os, copy
+import os
 from .reid_samples import ReIDSamples
 
 
-class Market1501(ReIDSamples):
+class OriginalImages_ReID(ReIDSamples):
     """Market1501.
     Reference:
         Zheng et al. Scalable Person Re-identification: A Benchmark. ICCV 2015.
@@ -32,9 +32,9 @@ class Market1501(ReIDSamples):
                 return 'dataset path {} is not existed, start download dataset'.format(data_path)
 
         # paths of train, query and gallery
-        train_path = os.path.join(data_path, 'bounding_box_train/')
+        train_path = os.path.join(data_path, 'Img-train/')
         query_path = os.path.join(data_path, 'query/')
-        gallery_path = os.path.join(data_path, 'bounding_box_test/')
+        gallery_path = os.path.join(data_path, 'gallery/')
 
         # load samples
         train = self._load_samples(train_path)
@@ -59,7 +59,7 @@ class Market1501(ReIDSamples):
         :param file_name: format like 0844_c3s2_107328_01.jpg
         :return: 0844, 3
         '''
-        split_list = file_name.replace('.jpg', '').replace('c', '').replace('s', '_').split('_')
+        split_list = file_name.replace('.jpg', '').split('-')
         person_id, camera_id = int(split_list[0]), int(split_list[1])
         return person_id, camera_id
 

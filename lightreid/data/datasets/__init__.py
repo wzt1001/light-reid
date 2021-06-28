@@ -1,4 +1,4 @@
-from .market1501 import Market1501
+from .originalimages import Market1501
 from .dukemtmcreid import DukeMTMCreID
 from .msmt17 import MSMT17
 from .cuhk03 import CUHK03
@@ -14,8 +14,5 @@ from .partial_reid import PartialReID
 from .build import build_train_dataset, build_test_dataset
 
 
-__all__ = [
-    'Market1501', 'DukeMTMCreID', 'MSMT17', 'CUHK03', 'WildTrackCrop', 'RAP',
-    'NJUST365', 'NJUST365WIN', 'NJUST365SPR', 'AirportAlert', 'PRID',
-    'OccludedReID', 'PartialILIDS', 'PartialReID',
+__all__ = [, 'PartialReID',
     'build_train_dataset', 'build_test_dataset']

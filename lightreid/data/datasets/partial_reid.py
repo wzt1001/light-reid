@@ -3,11 +3,10 @@
 @contact:   guan.wang0706@gmail.com
 """
 
-import os,copy
-import os.path as osp
+import os
 
 from .reid_samples import ReIDSamples
-from lightreid.utils import os_walk
+
 
 
 class PartialReID(ReIDSamples):
