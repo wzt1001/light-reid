@@ -1,18 +1,6 @@
-from .originalimages import Market1501
-from .dukemtmcreid import DukeMTMCreID
-from .msmt17 import MSMT17
-from .cuhk03 import CUHK03
-from .wildtrack import WildTrackCrop
-from .rap import RAP
-from .njust365 import NJUST365, NJUST365SPR, NJUST365WIN
-from .airportalert import AirportAlert
-from .prid import PRID
-from .occluded_reid import OccludedReID
-from .partial_ilids import PartialILIDS
-from .partial_reid import PartialReID
+from .originalimages import OriginalImages_ReID
 
 from .build import build_train_dataset, build_test_dataset
 
 
-__all__ = [, 'PartialReID',
-    'build_train_dataset', 'build_test_dataset']
+__all__ = ['OriginalImages_ReID', 'build_train_dataset', 'build_test_dataset']

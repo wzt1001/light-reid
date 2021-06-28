@@ -8,17 +8,7 @@ from .reid_samples import ReIDSamples
 
 
 class OriginalImages_ReID(ReIDSamples):
-    """Market1501.
-    Reference:
-        Zheng et al. Scalable Person Re-identification: A Benchmark. ICCV 2015.
-    URL: `<http://www.liangzheng.org/Project/project_reid.html>`_
-    Dataset statistics:
-        - identities: 1501 (+1 for background).
-        - images: 12936 (train) + 3368 (query) + 15913 (gallery).
-    Args:
-        data_path(str): path to Market-1501 dataset
-        combineall(bool): combine train and test sets as train set if True
-    """
+
     dataset_url = 'http://188.138.127.15:81/Datasets/Market-1501-v15.09.15.zip'
 
     def __init__(self, data_path, combineall=False, download=False):
@@ -42,7 +32,7 @@ class OriginalImages_ReID(ReIDSamples):
         gallery = self._load_samples(gallery_path)
         
         # init
-        super(Market1501, self).__init__(train, query, gallery, combineall)
+        super(OriginalImages_ReID, self).__init__(train, query, gallery, combineall)
 
     def _load_samples(self, folder_dir):
         '''return (img_path, identity_id, camera_id)'''
@@ -62,9 +52,3 @@ class OriginalImages_ReID(ReIDSamples):
         split_list = file_name.replace('.jpg', '').split('-')
         person_id, camera_id = int(split_list[0]), int(split_list[1])
         return person_id, camera_id
-
-
-class Market1501withAttr(Market1501):
-
-    pass
-
